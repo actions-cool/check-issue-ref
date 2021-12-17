@@ -1,12 +1,12 @@
 # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions
-name: 'Action TS Template'
-description: 'A typescript template for rapid development of GitHub actions.'
+name: 'Check Issue Reference'
+description: 'Check a issue whether create by reference.'
 author: 'xrkffgg'
 
+# https://actions-cool.github.io/github-action-branding/
 branding:
-  # https://actions-cool.github.io/github-action-branding/
-  icon: 'file'
-  color: 'blue'
+  icon: 'git-branch'
+  color: 'green'
 
 inputs:
   token:
@@ -14,9 +14,9 @@ inputs:
     default: ${{ github.token }}
     required: true
 
-#outputs:
-#  result:
-#    description: action result
+outputs:
+ result:
+   description: issue ref
 
 runs:
   using: 'node12'
